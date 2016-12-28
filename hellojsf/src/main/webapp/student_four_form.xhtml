@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" >
+	
+	<h:head>
+		<title> Student Registratoin form with multiselect </title>
+	</h:head>
+	
+	<h:body>
+	
+		<h:form>
+			
+			First Name : <h:inputText id="firstName" value="#{sFour.firstName}" /> <br/>
+			Last Name : <h:inputText id="lastName" value="#{sFour.lastName}" /> <br/>
+			Select Languages : <br/>
+			<h:selectManyCheckbox value="#{sFour.favLangs}">
+				<f:selectItem itemValue="Java" itemLabel="Java"/>
+				<f:selectItem itemValue="PHP" itemLabel="PHP" />
+				<f:selectItem itemValue="C#" itemLabel="C#"/>
+			</h:selectManyCheckbox>
+			
+			
+			<br/>
+			<h:commandButton value="Submit" action="student_four_response" />
+		</h:form>
+		
+	</h:body>
+	
+</html>

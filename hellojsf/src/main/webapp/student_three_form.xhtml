@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" >
+
+	<h:head>
+		<title>Student Registration With Favourite Langague</title>
+	</h:head>
+		
+	<h:body>
+		<h:form>
+			First Name : <h:inputText id="firstName" value="#{sThree.firstName}" label="First Name" /><br/>
+			Last Name : <h:inputText id="lastName" value="#{sThree.lastName}" label="Last Name" /><br/>
+			Select Language : <br/>
+			<h:selectOneRadio value="#{sThree.favLang}">
+				<f:selectItem itemValue="Java" itemLabel="Java" />
+				<f:selectItem itemValue="Ruby" itemLabel="Ruby" />
+				<f:selectItem itemValue="C#" itemLabel="C#" />
+			</h:selectOneRadio>
+			<h:commandButton value="Submit" action="student_three_response" />
+		</h:form>
+	</h:body>
+</html>
