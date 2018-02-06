@@ -1,6 +1,8 @@
 package com.teja.jsf12;
 
-public class HelloBean {
+import java.util.Random;
+
+public class BeanBasedNavigation {
 
 	private String name;
 
@@ -16,6 +18,11 @@ public class HelloBean {
 
 	public String sayHello(){
 		System.out.println("In say hello");
-		return "success";
+		int nextInt = new Random().nextInt(10);
+		if( nextInt <3){
+			return "success";
+		}else{
+			return "failure";
+		}
 	}
 }
